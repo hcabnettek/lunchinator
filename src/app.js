@@ -8,7 +8,8 @@ var express = require('express')
   , user = require('./routes/user')
   , http = require('http')
   , path = require('path')
-  , config = require('./config');
+  , config = require('./config')
+  , stylus = require('stylus');
 
 var app = express();
 
@@ -16,6 +17,11 @@ app.configure(function(){
   app.set('port', process.env.PORT || 3000);
   app.set('views', __dirname + '/views');
   app.set('view engine', 'jade');
+  app.use(stylus.middleware({
+    src: "" + __dirname + "/views",
+    dest: "" + __dirname + "/public",
+    compress: true
+  }));
   app.use(express.favicon());
   app.use(express.logger('dev'));
   app.use(express.bodyParser());
