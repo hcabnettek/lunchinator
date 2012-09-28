@@ -1,9 +1,24 @@
 {
-	"name":"lunchinator",
-	"description":"helps users decide where to eat lunch",
-	"version":"0.0.1",
-	"private":"true",
-	"dependencies": {
-		"express":"3.x"
-	}
+  "name": "Lunchinator",
+  "version": "0.0.1",
+  "description": "Where do you want to go for lunch?",
+  "contributors": [ 
+    {
+      "name": "Craig Maslowski",
+      "email": "craig@craigmaslowski.com "
+    } 
+  ],
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hcabnettek/lunchinator.git"
+  },
+  "dependencies" : {
+    "express"   :  "> 3.0.0",
+  },
+  "engines": {
+    "node": ">=0.8"
+  }
 }
