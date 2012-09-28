@@ -16,7 +16,8 @@
     "url": "https://github.com/hcabnettek/lunchinator.git"
   },
   "dependencies": {
-    "express":  "3.x"
+    "express":  "3.x", 
+    "jade": "0.27.5"
   },
   "engines": {
     "node": ">=0.8"
