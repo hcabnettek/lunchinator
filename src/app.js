@@ -26,6 +26,10 @@ app.configure(function(){
   app.use(express.logger('dev'));
   app.use(express.bodyParser());
   app.use(express.methodOverride());
+  app.use(express.cookieParser('my super sekret hash'));
+  app.use(express.session({
+    secret: 'my super sekret hash'
+  }));
   app.use(app.router);
   app.use(express.static(path.join(__dirname, 'public')));
 });
