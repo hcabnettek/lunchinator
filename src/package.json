@@ -5,7 +5,7 @@
   "contributors": [ 
     {
       "name": "Craig Maslowski",
-      "email": "craig@craigmaslowski.com "
+      "email": "craig@craigmaslowski.com"
     } 
   ],
   "scripts": {
@@ -15,8 +15,8 @@
     "type": "git",
     "url": "https://github.com/hcabnettek/lunchinator.git"
   },
-  "dependencies" : {
-    "express"   :  "> 3.0.0",
+  "dependencies": {
+    "express":  "3.x"
   },
   "engines": {
     "node": ">=0.8"
