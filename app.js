@@ -4,18 +4,16 @@
  */
 
 var express = require('express')
-  , mongodb = require('mongodb')
+  , mongoose = require('mongoose')
   , url = require('url')
   , routes = require('./routes')
   , user = require('./routes/user')
+  , restaurant = require('./routes/restaurant')
   , http = require('http')
   , path = require('path')
   , config = require('./config')
   , stylus = require('stylus');
 
-var MONGOHQ_URL = process.env.MONGOHQ_URL || "mongodb://<user>:<password>@alex.mongohq.com:10062/app8173016"
-var connectionUri = url.parse(MONGOHQ_URL);
-var dbName = connectionUri.pathname.replace(/^\//,'');
 var app = express();
 
 app.configure(function(){
@@ -45,6 +43,7 @@ app.configure('development', function(){
 
 app.get('/', routes.index);
 app.get('/users', user.list);
+app.get('/restaurants', restaurant.list);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
