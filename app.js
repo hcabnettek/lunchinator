@@ -4,8 +4,6 @@
  */
 
 var express = require('express')
-  , mongoose = require('mongoose')
-  , url = require('url')
   , routes = require('./routes')
   , user = require('./routes/user')
   , restaurant = require('./routes/restaurant')
