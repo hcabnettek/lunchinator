@@ -4,6 +4,8 @@
  */
 
 var express = require('express')
+  , mongodb = require('mongodb')
+  , url = require('url')
   , routes = require('./routes')
   , user = require('./routes/user')
   , http = require('http')
@@ -11,6 +13,9 @@ var express = require('express')
   , config = require('./config')
   , stylus = require('stylus');
 
+var MONGOHQ_URL = process.env.MONGOHQ_URL || "mongodb://<user>:<password>@alex.mongohq.com:10062/app8173016"
+var connectionUri = url.parse(MONGOHQ_URL);
+var dbName = connectionUri.pathname.replace(/^\//,'');
 var app = express();
 
 app.configure(function(){
