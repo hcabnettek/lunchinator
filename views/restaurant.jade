@@ -2,14 +2,13 @@ extends layout
 
 block content
 	h1= title
-	p
-		|Current list of restaurants
+	div(class='container')
+		p Current list of restaurants
 		ul
-		each item in restaurants
-			li #{item.Name}
-				span=item.Address
-
-	p
+			each item in restaurants
+				li #{item.Name}
+					span=item.Address
+		
 		form(id='form', method='post', action='/restaurants')
 			fieldset
 				label(for='name') Name
