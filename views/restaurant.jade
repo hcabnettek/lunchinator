@@ -4,3 +4,16 @@ block content
 	h1= title
 	p
 		|Current list of restaurants
+		ul
+		each item in restaurants
+			li #{item.Name}
+				span=item.Address
+
+	p
+		form(id='form', method='post', action='/restaurants')
+			fieldset
+				label(for='name') Name
+				input(type='text', name='name', id='name')
+				label(for='adrress') Address
+				input(type='text', name='address', id='address')
+				input(type='submit', value='Add Restaurant')

@@ -4,14 +4,16 @@ var db = require('mongoose'),
 exports.list = function(req, res){
   
   Restaurant.find({}, function(err, restaurants){
-  	if(err){
-  		console.log(err);
-
-  	}
-
-  	var title = 'Sweet';
   	console.log(restaurants);
-  	res.render('restaurant', { title: title, restaurants: restaurants });
-  })
+  	res.render('restaurant', { title: 'Restaurants', restaurants: restaurants });
+  });
   
+};
+
+exports.create = function(req, res){
+  
+  	var restaurant = new Restaurant({ Name: req.body.name, Address: req.body.address });
+	restaurant.save(function (err) {
+	  	res.redirect('/restaurants');
+	});  
 };
