@@ -4,7 +4,6 @@
  */
 
 var express = require('express')
-  , routes = require('./routes')
   , user = require('./routes/user')
   , restaurant = require('./routes/restaurant')
   , http = require('http')
@@ -13,6 +12,8 @@ var express = require('express')
   , stylus = require('stylus');
 
 var app = express();
+
+require('./db');
 
 app.configure(function(){
   app.set('port', process.env.PORT || 3000);
@@ -38,6 +39,8 @@ app.configure(function(){
 app.configure('development', function(){
   app.use(express.errorHandler());
 });
+
+var routes = require('./routes');
 
 app.get('/', routes.index);
 app.get('/users', user.list);
