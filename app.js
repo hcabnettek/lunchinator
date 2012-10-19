@@ -9,11 +9,23 @@ var express = require('express')
   , http = require('http')
   , path = require('path')
   , config = require('./config')
-  , stylus = require('stylus');
+  , stylus = require('stylus')
+  , url = require('url');
 
 var app = express();
 
 require('./db');
+
+var RedisStore = require('connect-redis')(express);
+
+app.configure(function(){
+  var redisUrl = url.parse(process.env.REDISTOGO_URL),
+    redisAuth = redisUrl.auth.split(':');
+  app.set('redisHost', redisUrl.hostname);
+  app.set('redisPort', redisUrl.port);
+  app.set('redisDb', redisAuth[0]);
+  app.set('redisPass', redisAuth[1]);
+});
 
 app.configure(function(){
   app.set('port', process.env.PORT || 3000);
@@ -30,7 +42,13 @@ app.configure(function(){
   app.use(express.methodOverride());
   app.use(express.cookieParser('my super sekret hash'));
   app.use(express.session({
-    secret: 'my super sekret hash'
+    secret: 'my super sekret hash',
+    store: new RedisStore({
+      host: app.get('redisHost'),
+      port: app.get('redisPort'),
+      db: app.get('redisDb'),
+      pass: app.get('redisPass')
+    })
   }));
   app.use(app.router);
   app.use(express.static(path.join(__dirname, 'public')));
