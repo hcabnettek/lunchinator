@@ -61,7 +61,6 @@ app.configure('development', function(){
 var routes = require('./routes');
 
 app.get('/', routes.index);
-app.get('/users', user.list);
 app.get('/restaurants', restaurant.list);
 app.post('/restaurants', restaurant.create);
 app.get('/user/checkin', user.list);

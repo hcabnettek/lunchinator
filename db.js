@@ -13,4 +13,4 @@ var userCheckInSchema = new Schema({
 
 mongoose.connect(process.env.MONGOHQ_URL);
 exports.Restaurant = mongoose.model('Restaurant', restaurantSchema, 'Restaurant');
-exports.UserCheckIn = mongoose.model('CheckedInUser', userCheckInSchema, 'CheckedInUser');
+exports.CheckedInUser = mongoose.model('CheckedInUser', userCheckInSchema, 'CheckedInUser');
