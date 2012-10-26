@@ -2,7 +2,12 @@ var db = require('mongoose'),
  Restaurant = require('../db').UserCheckIn;
 
 exports.list = function(req, res){
-  res.send("respond with a resource");
+  
+  UserCheckIn.find({}, function(err, users){
+  	console.log(users);
+  	res.render('users', { title: "Users", users: users });
+  });
+  
 };
 
 exports.checkin = function(req, res){
