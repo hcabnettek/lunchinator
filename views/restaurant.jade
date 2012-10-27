@@ -1,18 +1,22 @@
 extends layout
 
 block content
-	h1= title
 	div(class='container')
 		p Current list of restaurants
-		ul
+		ul(class='unstyled')
 			each item in restaurants
 				li #{item.Name}
 					span=item.Address
 		
-		form(id='form', method='post', action='/restaurants')
+		form(id='form', method='post', action='/restaurants', class='form-horizontal')
 			fieldset
-				label(for='name') Name
-				input(type='text', name='name', id='name')
-				label(for='adrress') Address
-				input(type='text', name='address', id='address')
-				input(type='submit', value='Add Restaurant')
+				legend Add a restaurant
+				div(class='control-group')
+					label(class='control-label', for='name') Name
+					div(class='controls')
+						input(type='text', name='name', id='name')
+				div(class='control-group')
+					label(class='control-label', for='adrress') Address
+					div(class='controls')
+						input(type='text', name='address', id='address')
+				button(type='submit', class='btn') Add Restaurant

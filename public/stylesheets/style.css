@@ -1,5 +1,2 @@
-body{font-family:arial}
-.container{margin:0 auto;padding:20px;width:1024px;border:1px solid #999}
-#form fieldset{padding:16px}
-ul{list-style:none}
-li span{font-size:.7em;margin-left:10px;color:#999}
+body{padding-top:60px;padding-bottom:40px}
+.sidebar-nav{padding:9px 0}
