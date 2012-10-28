@@ -41,7 +41,7 @@ app.configure(function(){
     secret: 'my super sekret hash',
     store: new RedisStore({
       host: app.get('redisHost'),
-      port: app.get('redisPort')//,
+      port: app.get('redisPort'),
       db: app.get('redisDb'),
       pass: app.get('redisPass')
     })
