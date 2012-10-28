@@ -15,12 +15,12 @@ require('./db');
 var RedisStore = require('connect-redis')(express);
 
 var authcheck = function(req, res, next){
-  //if(req.cookies.remberme === true && req.cookies.user){
+  if(req.cookies.remberme === true && req.cookies.user){
   //  req.session.user = { name: req.cookies.user.name, isAuthenticated: true}
-  //  next();
-  //} 
+    next();
+  } 
 
-  //req.session.user = { name: '', isAuthenticated: false};
+  req.session.user = 'user';
   next(); 
 };
 
