@@ -28,9 +28,9 @@ html
 								a(href='restaurants') Restaurants
 							li
 								a(href='user/checkin') CheckIn
-						form(class='navbar-form pull-right')
-							input(class='span2', type='text', placeholder='Email') 
-							input(class='span2 spacer', type='password', placeholder='Password')  
+						form(class='navbar-form pull-right', method='post', action='/user/login')
+							input(class='span2', type='text', placeholder='Email', name='email') 
+							input(class='span2 spacer', type='password', placeholder='Password', name='password')  
 							button(type='submit', class='btn spacer') Sign in
 		block content
 		script(src='/js/jquery-1.8.2.min.js')
