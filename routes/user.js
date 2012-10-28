@@ -24,9 +24,9 @@ exports.login = function(req, res){
  				res.redirect('/');
  			});
   		} else {
-  			console.log(user);
+  			res.send('found user');
   		}
-  		res.redirect('/');
+  		
  	}); 	
 };
 
