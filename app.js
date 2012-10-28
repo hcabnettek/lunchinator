@@ -15,22 +15,22 @@ require('./db');
 var RedisStore = require('connect-redis')(express);
 
 var authcheck = function(req, res, next){
-  if(req.cookies.remberme === true && req.cookies.user){
-    req.session.user = { name: req.cookies.user.name, isAuthenticated: true}
-    next();
-  } 
+  //if(req.cookies.remberme === true && req.cookies.user){
+  //  req.session.user = { name: req.cookies.user.name, isAuthenticated: true}
+  //  next();
+  //} 
 
-  req.session.user = { name: '', isAuthenticated: false};
+  //req.session.user = { name: '', isAuthenticated: false};
   next(); 
 };
 
 app.configure(function(){
-  var redisUrl = url.parse(process.env.REDISTOGO_URL);
-    //redisAuth = redisUrl.auth.split(':');
+  var redisUrl = url.parse(process.env.REDISTOGO_URL),
+    redisAuth = redisUrl.auth.split(':');
   app.set('redisHost', redisUrl.hostname);
   app.set('redisPort', redisUrl.port);
- // app.set('redisDb', redisAuth[0]);
- // app.set('redisPass', redisAuth[1]);
+  app.set('redisDb', redisAuth[0]);
+  app.set('redisPass', redisAuth[1]);
 });
 
 app.configure(function(){
@@ -51,9 +51,9 @@ app.configure(function(){
     secret: 'my super sekret hash',
     store: new RedisStore({
       host: app.get('redisHost'),
-      port: app.get('redisPort')
-      //db: app.get('redisDb'),
-      //pass: app.get('redisPass')
+      port: app.get('redisPort'),
+      db: app.get('redisDb'),
+      pass: app.get('redisPass')
     })
   }));
   app.use(app.router);
