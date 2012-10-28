@@ -1,5 +1,7 @@
 var db = require('mongoose'),
- CheckedInUser = require('../db').CheckedInUser;
+	orm = require('../db'),
+	CheckedInUser = orm.CheckedInUser,
+	User = orm.User;
 
 exports.list = function(req, res){
   
@@ -8,6 +10,23 @@ exports.list = function(req, res){
   	res.render('users', { title: "Users", users: users });
   });
   
+};
+
+exports.login = function(req, res){
+ 	User.findOne({'Email': req.body.email}, function(err, user){
+		if(err) console.log(err);
+ 		if(null === user){
+ 			var currentUser = new User({Name: req.body.email, Email: req.body.email, Password: req.body.password});
+ 			currentUser.save(function(err){
+ 				if(err) console.log(err);
+ 				console.log('Looks like it was saved');
+ 				res.redirect('/index');
+ 			});
+  		} else {
+  			console.log(user);
+  		}
+  		res.redirect('/index');
+ 	}); 	
 };
 
 exports.checkin = function(req, res){
