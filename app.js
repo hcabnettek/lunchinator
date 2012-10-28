@@ -20,7 +20,7 @@ var authcheck = function(req, res, next){
     next();
   } 
 
-  req.session.user = 'user';
+  req.session.user = { isAuthenticated : false};
   next(); 
 };
 
