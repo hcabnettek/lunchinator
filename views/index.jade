@@ -1,5 +1,11 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+	div(class='container')
+		div(class='hero-unit')
+			h1 Welcome to #{title}
+			p
+				|	An easy to use application to help a group
+				|	of people choose a place to eat lunch.
+			p
+				a(class='btn btn-primary btn-large') Get Started >>

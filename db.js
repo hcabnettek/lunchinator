@@ -11,6 +11,11 @@ var userCheckInSchema = new Schema({
 	Email: String
 });
 
-	mongoose.connect(process.env.MONGOHQ_URL);
+var lunchSchema = new Schema({
+	Name: String,
+	Email: String
+});
+
+mongoose.connect(process.env.MONGOHQ_URL);
 exports.Restaurant = mongoose.model('Restaurant', restaurantSchema, 'Restaurant');
 exports.CheckedInUser = mongoose.model('CheckedInUser', userCheckInSchema, 'CheckedInUser');
