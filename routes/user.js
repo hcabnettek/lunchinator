@@ -20,7 +20,7 @@ exports.login = function(req, res){
  			currentUser.save(function(err){
  				if(err) console.log(err);
  				console.log('Looks like it was saved');
-        res.cookies.user =  {name: currentUser.Name, isAuthenticated :true}
+        res.cookie('user', JSON.stringify({name: currentUser.Name, isAuthenticated :true}));
  				res.redirect('/index');
  			});
   		} else {
