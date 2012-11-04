@@ -3,7 +3,8 @@ var mongoose = require('mongoose'),
 
 var restaurantSchema = new Schema({
 	Name: String,
-	Address: String
+	Address: String,
+	Url: String
 });
 
 var userCheckInSchema = new Schema({

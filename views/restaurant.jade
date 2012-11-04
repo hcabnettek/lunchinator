@@ -1,7 +1,7 @@
 extends layout
 
 block content
-	div(class='container')
+	.container
 		p Current list of restaurants
 		ul(class='unstyled')
 			each item in restaurants
@@ -11,14 +11,18 @@ block content
 		form(id='form', method='post', action='/restaurants', class='form-horizontal')
 			fieldset
 				legend Add a restaurant
-				div(class='control-group')
+				.control-group
 					label(class='control-label', for='name') Name
-					div(class='controls')
+					.controls
 						input(type='text', name='name', id='name')
-				div(class='control-group')
+				.control-group
 					label(class='control-label', for='adrress') Address
-					div(class='controls')
+					.controls
 						input(type='text', name='address', id='address')
+				.control-group
+					label(class='control-label', for='url') Url
+					.controls
+						input(type='text', name='url', id='url')
 				button(type='submit', class='btn') Add Restaurant
 block scripts
 		script(src='/js/app/modules/restaurant.js')

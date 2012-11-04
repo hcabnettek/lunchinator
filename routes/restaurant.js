@@ -10,7 +10,7 @@ exports.list = function(req, res){
 
 exports.create = function(req, res){
   
-  	var restaurant = new Restaurant({ Name: req.body.name, Address: req.body.address });
+  	var restaurant = new Restaurant({ Name: req.body.name, Address: req.body.address, Url: req.body.url });
 	restaurant.save(function (err) {
 	  	res.redirect('/restaurants');
 	});  
