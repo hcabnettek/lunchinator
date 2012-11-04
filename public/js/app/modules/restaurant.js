@@ -1,11 +1,5 @@
 angular.module('restaurant.services', []);
-angular.module('restaurant.directives', [])
-	.directive('restaurant', function(){
-		return {
-			restrict: 'E',
-			template: '<li>Hello World</li>'
-		}
-	});
+angular.module('restaurant.directives', []);
 angular.module('restaurant.filter', []);
 
 angular.module('restaurant', [

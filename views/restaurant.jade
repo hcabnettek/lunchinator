@@ -5,9 +5,7 @@ block content
 		p Current list of restaurants
 		ul(class='unstyled')
 			each item in restaurants
-				li #{item.Name}
-					span=item.Address
-		
+				div(class='restaurant', restaurant-name=item.Name, restaurant-address=item.Address)
 		form(id='form', method='post', action='/restaurants', class='form-horizontal')
 			fieldset
 				legend Add a restaurant
