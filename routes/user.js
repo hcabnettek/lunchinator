@@ -20,13 +20,13 @@ exports.login = function(req, res){
  			currentUser.save(function(err){
  				if(err) console.log(err);
  				console.log('Looks like it was saved');
-        res.cookie('user', JSON.stringify({name: currentUser.Name, isAuthenticated :true}));
- 				res.redirect('/');
- 			});
-  		} else {
-  			res.send('found user');
-  		}
-  		
+      });
+  	} else {
+      //res.cookie('user', {name: user.Name, isAuthenticated :true},{ maxAge: 900000 });
+      res.cookie('rememberme', true);
+      req.session.username = user.email;
+      res.redirect('restaurants');
+  	}  		
  	}); 	
 };
 

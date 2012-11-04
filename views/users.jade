@@ -8,11 +8,5 @@ block content
 			each item in users
 				li #{item.Name}
 					span=item.Email
-		
-		form(id='form', method='post', action='/user/checkin')
-			fieldset
-				label(for='name') Name
-				input(type='text', name='name', id='name')
-				label(for='adrress') Email
-				input(type='text', name='email', id='email')
-				input(type='submit', value='Add User')
+block scripts
+	script(src='/js/app/modules/user.js')

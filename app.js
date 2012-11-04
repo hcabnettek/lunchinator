@@ -5,32 +5,24 @@ var express = require('express')
   , http = require('http')
   , path = require('path')
   , config = require('./config')
+  , auth = require('./auth')
   , stylus = require('stylus')
   , url = require('url');
 
 var app = express();
 
-require('./db');
+var db = require('./db');
+var User = db.User;
 
 var RedisStore = require('connect-redis')(express);
 
-var authcheck = function(req, res, next){
-  if(req.cookies.remberme === true && req.cookies.user){
-  //  req.session.user = { name: req.cookies.user.name, isAuthenticated: true}
-    next();
-  } 
-
-  req.session.user = { isAuthenticated : false};
-  next(); 
-};
-
 app.configure(function(){
-  var redisUrl = url.parse(process.env.REDISTOGO_URL),
-    redisAuth = redisUrl.auth.split(':');
+  var redisUrl = url.parse(process.env.REDISTOGO_URL);//,
+    //redisAuth = redisUrl.auth.split(':');
   app.set('redisHost', redisUrl.hostname);
   app.set('redisPort', redisUrl.port);
-  app.set('redisDb', redisAuth[0]);
-  app.set('redisPass', redisAuth[1]);
+  //app.set('redisDb', redisAuth[0]);
+  //app.set('redisPass', redisAuth[1]);
 });
 
 app.configure(function(){
@@ -51,9 +43,9 @@ app.configure(function(){
     secret: 'my super sekret hash',
     store: new RedisStore({
       host: app.get('redisHost'),
-      port: app.get('redisPort'),
-      db: app.get('redisDb'),
-      pass: app.get('redisPass')
+      port: app.get('redisPort')
+      //db: app.get('redisDb'),
+      //pass: app.get('redisPass')
     })
   }));
   app.use(app.router);
@@ -66,12 +58,12 @@ app.configure('development', function(){
 
 var routes = require('./routes');
 
-app.get('/', authcheck, routes.index);
-app.get('/restaurants', authcheck, restaurant.list);
-app.post('/restaurants', authcheck, restaurant.create);
-app.get('/user/checkin', authcheck, user.list);
-app.post('/user/checkin', authcheck, user.checkin);
-app.post('/user/login', authcheck, user.login);
+app.get('/', auth.cookieCheck, routes.index);
+app.get('/restaurants', restaurant.list);
+app.post('/restaurants', restaurant.create);
+app.get('/user/checkin', user.list);
+app.post('/user/checkin', user.checkin);
+app.post('/user/login', user.login);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));

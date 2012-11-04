@@ -1,0 +1,5 @@
+form(class='navbar-form pull-right', method='post', action='/user/login')
+	input(class='span2', type='text', placeholder='Email', name='email') 
+	input(class='span2 spacer', type='password', placeholder='Password', name='password')
+	button(type='submit', class='btn spacer') Sign in
+//h6.pull-right Welcome back #{ user.email }
