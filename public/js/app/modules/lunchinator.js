@@ -3,8 +3,15 @@ angular.module('lunchinator.directive', [])
 	.directive('restaurant', function(){
 		return {
 			replace: true,
-			restrict: 'C',
-			template: '<li>Restaurant</li>'
+			restrict: 'E',
+			scope: {name: '@restaurantName', address:'@restaurantAddress', url:'@restaurantUrl'},
+			template: '<li class="restaurant">' +
+						'<div class="name">{{ name }}</div>' +
+						'<div class="address">{{ address }}</div>' +
+						'<div class="url"><a href="{{ url }}" target="_blank">View</a></div>' +
+						'</li>',
+
+
 		};
 	});
 angular.module('lunchinator.filter', []);
