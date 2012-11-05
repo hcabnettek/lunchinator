@@ -3,15 +3,15 @@ extends layout
 block content
 	.container
 		.row
-			.span4
+			.span4.pull-left
 				p Current list of restaurants
-				ul(class='unstyled restaurants pull-left')
+				ul(class='unstyled restaurants')
 					each item in restaurants
 						restaurant(restaurant-name=item.Name, 
 							restaurant-address=item.Address,
 							restuaurant-url=item.Url)
-			.span6
-				form(id='form', method='post', action='/restaurants', class='form-horizontal pull-right')
+			.span6.pull-right
+				form(id='form', method='post', action='/restaurants', class='form-horizontal')
 					fieldset
 						legend Add a restaurant
 						.control-group
