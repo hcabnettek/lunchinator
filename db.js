@@ -28,7 +28,7 @@ var lunchSchema = new Schema({
 	Votes: {up: Number, down: Number}
 });
 
-console.log(process.env.MONGOHQ_URL);
+
 mongoose.connect(process.env.MONGOHQ_URL);
 exports.Restaurant = mongoose.model('Restaurant', restaurantSchema, 'Restaurant');
 exports.CheckedInUser = mongoose.model('CheckedInUser', userCheckInSchema, 'CheckedInUser');

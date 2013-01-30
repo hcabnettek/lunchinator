@@ -4,5 +4,3 @@ body{padding-top:60px;padding-bottom:40px}
 .restaurant{border-radius:6px;background-color:#faf0f0;border:1px outset #f0fff0;padding:5px;margin:4px 0}
 .restaurant .name{font-weight:bold}
 .restaurant .address,.restaurant .url{font-size:.7em}
-.row-fluid > div { border: 1px solid red;}
-.fullheight { position: absolute; height: 100%;}
