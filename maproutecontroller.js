@@ -1,8 +1,9 @@
+'use strict';
+
 exports.mapRoute = function(app, prefix){
-	'use strict';
-	console.log(prefix);
+	
 	prefix = '/' + prefix;
-	console.log(prefix);
+	
 	var prefixObj = require('./controllers' + prefix);
 
 	// index
