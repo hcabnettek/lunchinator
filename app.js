@@ -10,12 +10,12 @@ var express = require('express'),
   RedisStore = require('connect-redis')(express);
 
 app.configure(function(){
-  var redisUrl = url.parse(process.env.REDISTOGO_URL);
-      //redisAuth = redisUrl.auth.split(':');
+  var redisUrl = url.parse(process.env.REDISTOGO_URL),
+      redisAuth = redisUrl.auth.split(':');
   app.set('redisHost', redisUrl.hostname);
   app.set('redisPort', redisUrl.port);
-  //app.set('redisDb', redisAuth[0]);
-  //app.set('redisPass', redisAuth[1]);
+  app.set('redisDb', redisAuth[0]);
+  app.set('redisPass', redisAuth[1]);
 });
 
 app.configure(function(){
@@ -36,9 +36,9 @@ app.configure(function(){
     secret: 'my super sekret hash',
     store: new RedisStore({
       host: app.get('redisHost'),
-      port: app.get('redisPort')
-      //db: app.get('redisDb'),
-      //pass: app.get('redisPass')
+      port: app.get('redisPort'),
+      db: app.get('redisDb'),
+      pass: app.get('redisPass')
     })
   }));
   app.use(app.router);
