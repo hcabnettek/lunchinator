@@ -13,6 +13,7 @@ function UsersCtrl ($scope, $http) {
 		});
 
   $scope.edit = function(id){
+  	console.log('calling edit!');
   	window.hash = '/#/user/id';
   };
  
