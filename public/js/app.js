@@ -58,17 +58,17 @@ var lunchinator = angular.module('lunchinator', ['api'])
         templateUrl: 'partials/restaurant',
         controller: 'RestaurantCtrl'
       })
-      .when('/lunch', { 
-        templateUrl: 'partials/lunches',
-        controller: 'LunchesCtrl'
-      })
-      .when('/lunch/:id', { 
-        templateUrl: 'partials/lunch',
-        controller: 'LunchCtrl'
-      })
       .when('/lunch/new', { 
         templateUrl: 'partials/newLunch',
         controller: 'LunchCtrl'
+      })
+       .when('/lunch/:id', { 
+        templateUrl: 'partials/lunch',
+        controller: 'LunchCtrl'
+      })
+      .when('/lunch', { 
+        templateUrl: 'partials/lunches',
+        controller: 'LunchesCtrl'
       })
       .otherwise({
         redirectTo: '/'
