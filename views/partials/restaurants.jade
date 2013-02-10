@@ -1,0 +1,8 @@
+.container
+	.row
+		.span4.pull-left
+			p Current list of restaurants
+			ul(class='unstyled restaurants')
+				li(ng-repeat="restaurant in restaurants")
+					h3 {{restaurant.Name}}
+					span {{restaurant.Address}}

@@ -1,5 +1,12 @@
-p Current list of users
-ul(class='unstyled')
-	li(ng-repeat="user in users")
-		h3 {{user.Name}}
-		span {{user.Email}}
+.userList
+	table(class="table table-bordered")
+		caption Registered Lunchinators
+		thead
+			tr
+				th Name
+				th Email
+		tbody
+			tr(ng-repeat="user in users", ng-click="edit({{user._id}})")
+				td {{user.Name}}
+				td {{user.Email}}
+	a(class='btn btn-mini btn-primary', href='/#/user/new') New >>

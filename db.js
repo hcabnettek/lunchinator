@@ -15,7 +15,6 @@ var userCheckInSchema = new Schema({
 var userSchema = new Schema({
 	Name: String,
 	Email: String,
-	Password: String,
 	Lunches : [{type:Schema.Types.ObjectId, ref: 'Lunch'}]
 });
 

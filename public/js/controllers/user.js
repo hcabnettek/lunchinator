@@ -1,9 +1,19 @@
 'use strict';
 
-function UserCtrl($scope, $http){
-	$http.get('/user').
+function UserCtrl($scope, $routeParams, UserApi) {
+	var userId = $routeParams.userId;
+	 
+}
+
+function UsersCtrl ($scope, $http) {
+ 
+  $http.get('/user').
 		success(function(data, status, headers, config){
-			console.log(data);
 			$scope.users = data.users;
 		});
+
+  $scope.edit = function(id){
+  	window.hash = '/#/user/id';
+  };
+ 
 }

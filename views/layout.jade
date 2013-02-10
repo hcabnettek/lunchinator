@@ -21,12 +21,14 @@ html(ng-app="lunchinator")
 					.nav-collapse.collapse
 						ul(class='nav')
 							li(class='active')
-								a(href='#about') About
+								a(href='/#/about') About
 							li
-								a(href='#contact') Contact
+								a(href='/#/contact') Contact
 							li
-								a(href='/restaurants') Restaurants
+								a(href='/#/restaurant') Restaurants
 							li
-								a(href='/user/checkin') CheckIn
+								a(href='/#/user') Users
+							li
+								a(href='/#/lunch') Lunches
 		block content
 		include partials/js

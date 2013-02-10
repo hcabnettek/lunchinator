@@ -16,7 +16,7 @@ exports.mapRoute = function(app, prefix){
 	app.get(prefix + '/:id', prefixObj.show);
 
 	// create
-	app.get(prefix + '/create', prefixObj.create);
+	app.post(prefix + '/create', prefixObj.create);
 
 	// edit
 	app.get(prefix + '/:id/edit', prefixObj.edit);

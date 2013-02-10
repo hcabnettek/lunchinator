@@ -1,6 +1,10 @@
 body{padding-top:60px;padding-bottom:40px}
 .navbar-form .spacer{margin-left:3px}
--webkit-border-radius n,-moz-border-radius n,border-radius n,.restaurants{width:300px}
+-webkit-border-radius n,-moz-border-radius n,border-radius n,.userList{max-width:900px;margin:0 auto;}
+-webkit-border-radius n caption,-moz-border-radius n caption,border-radius n caption,.userList caption{text-align:left;font-size:1.4em;margin:0 3px 10px;padding:0 0 6px;border-bottom:1px inset #a9a9a9}
+-webkit-border-radius n thead tr:first-child th,-moz-border-radius n thead tr:first-child th,border-radius n thead tr:first-child th,.userList thead tr:first-child th{width:30%}
+-webkit-border-radius n:last-child a,-moz-border-radius n:last-child a,border-radius n:last-child a,.userList:last-child a{float:right}
+.restaurants{width:300px}
 .restaurant{border-radius:6px;background-color:#faf0f0;border:1px outset #f0fff0;padding:5px;margin:4px 0}
 .restaurant .name{font-weight:bold}
 .restaurant .address,.restaurant .url{font-size:.7em}

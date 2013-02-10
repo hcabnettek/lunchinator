@@ -3,8 +3,11 @@ var odm = require('../db');
 
 exports.index = function(req, res){
 	odm.Restaurant.find({}, function(err, restaurants){
-		res.render('restaurant/restaurants', { title: 'Restaurants', restaurants: restaurants });
-	});
+		if(err){
+			console.log(err);
+		}
+		res.json({restaurants:restaurants});
+	});	
 };
 
 exports.new = function(req, res){
