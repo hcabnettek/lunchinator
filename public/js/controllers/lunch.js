@@ -1,5 +1,5 @@
 'use strict';
-lunchinator.directive('myDirective', function(){
+lunchinator.directive('LunchWizardDirective', function(){
 
 	return function(scope, element, attrs){
 
@@ -17,11 +17,12 @@ lunchinator.controller('LunchCtrl', function($scope, $http) {
 		});*/
 });
 
-lunchinator.controller('LunchAddCtrl', function($scope, $http) {
-   
-/*
+lunchinator.controller('LunchAddCtrl', function($scope, LunchApi) {
+
+	//var d = LunchWizardDirective();
    	$scope.foo = function(){
-		console.log(foo);
+		console.log('LunchAddCtrl');
+		console.log(LunchApi);
 	};
-	*/
+	
 });

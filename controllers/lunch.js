@@ -8,6 +8,7 @@ exports.index = function(req, res){
 };
 
 exports.new = function(req, res){
+	console.log('new inside lunch controller');
 };
 
 exports.create = function(req, res){
