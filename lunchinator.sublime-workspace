@@ -1,0 +1,401 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Lun",
+				"LunchWizardDirective"
+			],
+			[
+				"user",
+				"userResource"
+			],
+			[
+				"res",
+				"restaurant"
+			],
+			[
+				"lun",
+				"lunchResource"
+			],
+			[
+				"ex",
+				"extend  (function)"
+			],
+			[
+				"restua",
+				"restaurant"
+			],
+			[
+				"Re",
+				"Restaurant"
+			],
+			[
+				"prefix",
+				"prefixObj"
+			],
+			[
+				"re",
+				"restaurants"
+			],
+			[
+				"rest",
+				"restaurant"
+			],
+			[
+				"c",
+				"cookieCheck"
+			],
+			[
+				"cook",
+				"cookies"
+			],
+			[
+				"r",
+				"rememberme"
+			],
+			[
+				"i",
+				"isAuthenticated"
+			],
+			[
+				"I",
+				"isAuthenticated"
+			],
+			[
+				"redis",
+				"redisAuth"
+			],
+			[
+				"cre",
+				"createConnection"
+			],
+			[
+				"Sche",
+				"Schema"
+			],
+			[
+				"R",
+				"Restaurant"
+			],
+			[
+				"Rest",
+				"Restaurants"
+			],
+			[
+				"pro",
+				"process"
+			],
+			[
+				"for",
+				"for	for (…) {…} (Improved Native For-Loop)"
+			],
+			[
+				"min",
+				"min-height"
+			],
+			[
+				"bo",
+				"box-shadow"
+			],
+			[
+				"moz-bo",
+				"-moz-border-radius:   (property)"
+			],
+			[
+				"li",
+				"link	Tag"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"s",
+				"style>  (element)"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 115.0,
+		"selected_items":
+		[
+			[
+				"add",
+				"Project: Add Folder"
+			],
+			[
+				"install package",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"Add",
+				"Package Control: Add Repository"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Set Syntax: JavaScript"
+			]
+		],
+		"width": 480.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/christopherkettenbach/Dev/node-projects/githublunchinator/lunchinator/app.js",
+		"/Users/christopherkettenbach/Dev/yeoman-projects/pubsub5/app/scripts/controllers/main.js",
+		"/Users/christopherkettenbach/Dev/yeoman-projects/pubsub5/test/spec/controllers/main.js",
+		"/Users/christopherkettenbach/Dev/yeoman-projects/pubsub5/app/scripts/app.js",
+		"/Users/christopherkettenbach/Dev/node-projects/githublunchinator/lunchinator/controllers/lunch.js",
+		"/Users/christopherkettenbach/Dev/node-projects/githublunchinator/lunchinator/public/js/controllers/lunch.js",
+		"/Users/christopherkettenbach/Dev/node-projects/githublunchinator/lunchinator/public/js/app.js",
+		"/Users/christopherkettenbach/Dev/node-projects/githublunchinator/lunchinator/views/partials/newLunch.jade",
+		"/Users/christopherkettenbach/Dev/node-projects/githublunchinator/lunchinator/views/partials/newRestaurant.jade",
+		"/Users/christopherkettenbach/Dev/node-projects/githublunchinator/lunchinator/views/partials/js.jade",
+		"/Users/christopherkettenbach/Dev/node-projects/githublunchinator/lunchinator/views/layout.jade",
+		"/Users/christopherkettenbach/Dev/node-projects/githublunchinator/lunchinator/views/partials/main.jade",
+		"/Users/christopherkettenbach/Dev/node-projects/githublunchinator/lunchinator/views/partials/users.jade",
+		"/Users/christopherkettenbach/Dev/node-projects/githublunchinator/lunchinator/db.js",
+		"/Users/christopherkettenbach/Dev/node-projects/githublunchinator/lunchinator/public/js/controllers/user.js",
+		"/Users/christopherkettenbach/Dev/node-projects/githublunchinator/lunchinator/views/stylesheets/style.styl",
+		"/Users/christopherkettenbach/Dev/node-projects/githublunchinator/lunchinator/public/js/controllers/restaurant.js",
+		"/Users/christopherkettenbach/Dev/node-projects/githublunchinator/lunchinator/views/partials/lunch.jade",
+		"/Users/christopherkettenbach/Dev/node-projects/githublunchinator/lunchinator/controllers/restaurant.js",
+		"/Users/christopherkettenbach/Dev/node-projects/githublunchinator/lunchinator/views/partials/user.jade",
+		"/Users/christopherkettenbach/Dev/node-projects/githublunchinator/lunchinator/views/partials/restaurants.jade",
+		"/Users/christopherkettenbach/Dev/node-projects/githublunchinator/lunchinator/controllers/user.js",
+		"/Users/christopherkettenbach/Dev/node-projects/githublunchinator/lunchinator/routes/index.js",
+		"/Users/christopherkettenbach/Dev/node-projects/githublunchinator/lunchinator/views/partials/restaurant.jade",
+		"/Users/christopherkettenbach/Dev/node-projects/githublunchinator/lunchinator/views/index.jade",
+		"/Users/christopherkettenbach/Dev/node-projects/githublunchinator/lunchinator/views/partials/lunches.jade",
+		"/Users/christopherkettenbach/Dev/node-projects/githublunchinator/lunchinator/views/partials/addRestaurant.jade",
+		"/Users/christopherkettenbach/Dev/node-projects/githublunchinator/lunchinator/maproutecontroller.js",
+		"/Users/christopherkettenbach/Dev/node-projects/githublunchinator/lunchinator/public/js/services/lunch.js",
+		"/Users/christopherkettenbach/Dev/node-projects/githublunchinator/lunchinator/public/js/controllers/main.js",
+		"/Users/christopherkettenbach/Dev/node-projects/githublunchinator/lunchinator/routes/api.js",
+		"/Users/christopherkettenbach/Dev/node-projects/githublunchinator/lunchinator/views/users.jade",
+		"/Users/christopherkettenbach/Dev/node-projects/githublunchinator/lunchinator/public/js/services/user.js",
+		"/Users/christopherkettenbach/Dev/yeoman-projects/pubsub5/app/scripts/services/catalog.js",
+		"/Users/christopherkettenbach/Dev/yeoman-projects/pubsub5/app/scripts/controllers/ranji.js",
+		"/Users/christopherkettenbach/Dev/yeoman-projects/pubsub5/app/views/ranji.html",
+		"/Users/christopherkettenbach/Dev/yeoman-projects/pubsub5/test/spec/controllers/ranji.js",
+		"/Users/christopherkettenbach/dev/node-projects/backbone-todo/src/grunt.js",
+		"/Users/christopherkettenbach/dev/node-projects/backbone-todo/src/require-config.js",
+		"/Users/christopherkettenbach/Dev/node-projects/backbone-todo/src/package.json",
+		"/Users/christopherkettenbach/dev/node-projects/backbone-todo/src/app/js/main.js",
+		"/Users/christopherkettenbach/dev/node-projects/backbone-todo/src/app/js/config.js",
+		"/Users/christopherkettenbach/dev/node-projects/backbone-todo/src/app/js/gapi.js",
+		"/Users/christopherkettenbach/dev/node-projects/backbone-todo/src/app/js/app.js",
+		"/Users/christopherkettenbach/dev/node-projects/backbone-todo/src/test/setup.js",
+		"/Users/christopherkettenbach/dev/node-projects/backbone-todo/src/app/gapi.js",
+		"/Users/christopherkettenbach/dev/node-projects/backbone-todo/src/test/app.test.js",
+		"/Users/christopherkettenbach/dev/node-projects/backbone-todo/src/test/index.html",
+		"/Users/christopherkettenbach/dev/node-projects/backbone-todo/src/app/index.html",
+		"/Users/christopherkettenbach/dev/node-projects/backbone-todo/src/server.js",
+		"/Users/christopherkettenbach/dev/node-projects/backbone-todo/src/package.json",
+		"/Users/christopherkettenbach/Dev/node-projects/backbone-todo/backbone-todo.sublime-project",
+		"/Users/christopherkettenbach/Dev/node-projects/githublunchinator/lunchinator/views/restaurant/restaurants.jade",
+		"/Users/christopherkettenbach/Dev/node-projects/githublunchinator/lunchinator/views/restaurant/addRestaurant.jade",
+		"/Users/christopherkettenbach/Dev/node-projects/githublunchinator/lunchinator/views/addRestaurant.jade",
+		"/Users/christopherkettenbach/Dev/node-projects/githublunchinator/lunchinator/views/restaurant/restaurant.jade",
+		"/Users/christopherkettenbach/Dev/node-projects/githublunchinator/lunchinator/views/restaurant/addRestaurant",
+		"/Users/christopherkettenbach/Dev/node-projects/githublunchinator/lunchinator/routes/restaurant.js",
+		"/Users/christopherkettenbach/Dev/node-projects/githublunchinator/lunchinator/package.json",
+		"/Users/christopherkettenbach/Dev/node-projects/githublunchinator/lunchinator/routes/user.js",
+		"/Users/christopherkettenbach/Dev/node-projects/githublunchinator/lunchinator/lunchinator",
+		"/Users/christopherkettenbach/Dev/node-projects/githublunchinator/lunchinator/auth.js",
+		"/Users/christopherkettenbach/Dev/node-projects/githublunchinator/lunchinator/config.js",
+		"/Users/christopherkettenbach/Dev/node-projects/nodeplay/tcpclient.js",
+		"/Users/christopherkettenbach/Dev/node-projects/nodeplay/tcpserver.js",
+		"/Users/christopherkettenbach/Dev/node-projects/ckmobile/Gruntfile.js",
+		"/Users/christopherkettenbach/Dev/node-projects/ckmobile/views/partials/menu.jade",
+		"/Users/christopherkettenbach/Dev/node-projects/ckmobile/routes/login.js",
+		"/Users/christopherkettenbach/Dev/node-projects/ckmobile/app.js",
+		"/Users/christopherkettenbach/Dev/node-projects/ckmobile/views/layout.jade",
+		"/Users/christopherkettenbach/Dev/node-projects/ckmobile/views/index.jade",
+		"/Users/christopherkettenbach/Dev/node-projects/ckmobile/test/unit/controllerSpec.js",
+		"/Users/christopherkettenbach/Dev/node-projects/ckmobile/views/login.jade",
+		"/Users/christopherkettenbach/Dev/node-projects/ckmobile/package.json",
+		"/Users/christopherkettenbach/Dev/node-projects/ckmobile/public/js/app/modules/ckmobile.js",
+		"/Users/christopherkettenbach/Dev/node-projects/ckmobile/scripts/test.sh",
+		"/Users/christopherkettenbach/Dev/node-projects/ckmobile/config/testacular.conf.js",
+		"/Users/christopherkettenbach/Dev/node-projects/angular-phonecat/test/unit/controllersSpec.js",
+		"/Users/christopherkettenbach/Dev/node-projects/angular-phonecat/test/unit/directivesSpec.js",
+		"/Users/christopherkettenbach/Dev/node-projects/angular-phonecat/test/unit/filtersSpec.js",
+		"/Users/christopherkettenbach/Dev/node-projects/angular-phonecat/test/unit/servicesSpec.js",
+		"/Users/christopherkettenbach/Dev/node-projects/ckmobile/views/stylesheets/style.styl",
+		"/Users/christopherkettenbach/Dev/node-projects/ckmobile/readme.md",
+		"/Users/christopherkettenbach/Dev/node-projects/ckmobile/views/partials/js.jade",
+		"/Users/christopherkettenbach/Dev/node-projects/ckmobile/views/users.jade",
+		"/Users/christopherkettenbach/Dev/node-projects/ckmobile/db.js",
+		"/Users/christopherkettenbach/Dev/node-projects/ckmobile/.env",
+		"/Users/christopherkettenbach/Dev/node-projects/ckmobile/routes/index.js",
+		"/Users/christopherkettenbach/Dev/node-projects/ckmobile/public/js/app/modules/lunchinator.js",
+		"/Users/christopherkettenbach/Dev/node-projects/githublunchinator/lunchinator/public/stylesheets/bootstrap.css",
+		"/Users/christopherkettenbach/Dev/node-projects/githublunchinator/lunchinator/Procfile",
+		"/Users/christopherkettenbach/Dev/node-projects/githublunchinator/lunchinator/.env",
+		"/Users/christopherkettenbach/Dev/node-projects/githublunchinator/lunchinator/views/partials/login.jade",
+		"/Users/christopherkettenbach/Dev/node-projects/githublunchinator/lunchinator/public/js/libs/bootstrap.js",
+		"/Users/christopherkettenbach/Dev/node-projects/githublunchinator/lunchinator/public/stylesheets/bootstrap-responsive.css",
+		"/misc.book.download",
+		"/Users/christopherkettenbach/Dev/node-projects/githublunchinator/lunchinator/public/js/app/modules/lunchinator.js",
+		"/Users/christopherkettenbach/Dev/node-projects/githublunchinator/lunchinator/views/partials/navbar.jade",
+		"/Users/christopherkettenbach/Dev/node-projects/githublunchinator/lunchinator/views/restaurant.jade",
+		"/Users/christopherkettenbach/Dev/node-projects/githublunchinator/lunchinator/views/partials/userform.jade",
+		"/Users/christopherkettenbach/Dev/node-projects/githublunchinator/lunchinator/public/js/app/modules/index.js",
+		"/Users/christopherkettenbach/Dev/node-projects/githublunchinator/lunchinator/public/js/app/modules/restaurant.js",
+		"/Users/christopherkettenbach/Dev/node-projects/githublunchinator/lunchinator/public/js/app/modules/user.js",
+		"/Users/christopherkettenbach/Dev/node-projects/githublunchinator/lunchinator/public/js/app/modules/user/user.js",
+		"/Users/christopherkettenbach/Dev/node-projects/githublunchinator/lunchinator/public/js/app/modules/lunchinator/lunchinator.js",
+		"/Users/christopherkettenbach/Dev/node-projects/githublunchinator/lunchinator/public/js/app/modules/index/index.js",
+		"/Users/christopherkettenbach/Dev/node-projects/githublunchinator/lunchinator/public/js/app/modules/restaurant/restaurant.js",
+		"/Users/christopherkettenbach/Dev/node-projects/githublunchinator/lunchinator/public/js/angular.min.js",
+		"/Users/christopherkettenbach/Downloads/angular.min.js",
+		"/Users/christopherkettenbach/Downloads/WCFMock.1.0-src/SampleService/ProductCatalog.cs",
+		"/Users/christopherkettenbach/Downloads/WCFMock.1.0-src/WCFMock/ServiceSecurityContextWrapper.cs",
+		"/Users/christopherkettenbach/Downloads/WCFMock.1.0-src/WCFMock/OperationContextWrapper.cs",
+		"/Users/christopherkettenbach/Desktop/mangoTree/tree.js",
+		"/Users/christopherkettenbach/Dev/node-projects/githublunchinator/lunchinator/public/stylesheets/style.css",
+		"/Volumes/MACROVAULT/JavaScript/labs/01 - The JavaScript Programming Language/before/intro.html",
+		"/Volumes/MACROVAULT/JavaScript/labs/01 - The JavaScript Programming Language/after/intro.html",
+		"/Volumes/MACROVAULT/JavaScript/labs/01 - The JavaScript Programming Language/before/intro.js",
+		"/Volumes/MACROVAULT/JavaScript.zip",
+		"/Users/christopherkettenbach/Desktop/jsunitests",
+		"/Users/christopherkettenbach/Dev/node-projects/githublunchinator/lunchinator/.gitignore",
+		"/Users/christopherkettenbach/dev/node-projects/lunchinator/.git/rebase-merge/git-rebase-todo",
+		"/Users/christopherkettenbach/Dev/node-projects/lunchinator/package.json",
+		"/Users/christopherkettenbach/Desktop/EventReportController",
+		"/usr/local/Library/Formula/autoconf.rb",
+		"/Users/christopherkettenbach/Desktop/target",
+		"/private/etc/hosts",
+		"/Users/christopherkettenbach/Desktop/base.css",
+		"/Users/christopherkettenbach/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings"
+	],
+	"find":
+	{
+		"height": 0.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			".when('/users', { \n        templateUrl: '',\n        controller: ''\n      })"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 43.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 248.0,
+	"status_bar_visible": true
+}

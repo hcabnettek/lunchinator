@@ -1,12 +1,13 @@
 .userList
-	table(class="table table-bordered")
+	table(class='table table-bordered')
 		caption Registered Lunchinators
 		thead
 			tr
 				th Name
 				th Email
 		tbody
-			tr(ng-repeat="user in users", ng-click="edit({{user._id}})")
-				td {{user.Name}}
+			tr(ng-repeat='user in data.users')
+				td(ng-click='edit($index)') {{user.Name}}
 				td {{user.Email}}
-	a(class='btn btn-mini btn-primary', href='/#/user/new') New >>
+					a(class='btn btn-mini btn-primary pull-right', href='/#/user/{{user._id}}') Edit
+	a(class='btn btn-mini btn-primary', href='/#/user/new') New
