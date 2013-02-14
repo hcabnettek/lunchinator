@@ -18,8 +18,8 @@ exports.show = function(req, res){
 	var id = req.params.id;
 
 	odm.User.findById(id, function(err, user){
-		if(err) console.log(err);
-
+		if(err) {console.log(err); }
+		console.log('Find By Id' + user);
 		res.json({user:user});
 	});
 };
