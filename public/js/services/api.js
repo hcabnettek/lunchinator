@@ -21,7 +21,7 @@ angular.module('api',['ngResource'])
     lunchSvc.prototype.update = function(cb){
       return lunchSvc.update({id: this._id.$oid},
          angular.extend({}, this, {_id:undefined}), cb);
-    }
+    };
     
     return lunchSvc;
   })
@@ -32,7 +32,7 @@ angular.module('api',['ngResource'])
     restaurantSvc.prototype.update = function(cb){
       return restaurantSvc.update({id: this._id.$oid},
          angular.extend({}, this, {_id:undefined}), cb);
-    }
+    };
     
     return restaurantSvc;
   });

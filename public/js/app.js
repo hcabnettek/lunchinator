@@ -4,38 +4,40 @@ var lunchinator = angular.module('lunchinator', ['api', 'lunchinator.controllers
   .config(['$routeProvider', function($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'partials/main',
+        templateUrl: 'partials/main/main',
         controller: 'MainCtrl'
       })
-      .when('/user', { 
-        templateUrl: 'partials/users',
+      .when('/user', {
+        templateUrl: 'partials/user/users',
         controller: 'UsersCtrl'
       })
-      .when('/user/:id', { 
-        templateUrl: 'partials/user',
+      .when('/user/:id', {
+        templateUrl: 'partials/user/user',
         controller: 'UserCtrl'
       })
-      .when('/restaurant', { 
-        templateUrl: 'partials/restaurants',
+      .when('/restaurant', {
+        templateUrl: 'partials/restaurant/restaurants',
         controller: 'RestaurantsCtrl'
       })
-      .when('/restaurant/:id', { 
-        templateUrl: 'partials/restaurant',
+      .when('/restaurant/:id', {
+        templateUrl: 'partials/restaurant/restaurant',
         controller: 'RestaurantCtrl'
       })
-      .when('/lunch/new', { 
-        templateUrl: 'partials/newLunch',
+      .when('/lunch/new', {
+        templateUrl: 'partials/lunch/newLunch',
         controller: 'LunchAddCtrl'
       })
-       .when('/lunch/:id', { 
-        templateUrl: 'partials/lunch',
+       .when('/lunch/:id', {
+        templateUrl: 'partials/lunch/lunch',
         controller: 'LunchCtrl'
       })
-      .when('/lunch', { 
-        templateUrl: 'partials/lunches',
+      .when('/lunch', {
+        templateUrl: 'partials/lunch/lunches',
         controller: 'LunchesCtrl'
       })
       .otherwise({
         redirectTo: '/'
-      });      
+      });
+
+      //console.log($locationProvider);
   }]);

@@ -3,11 +3,13 @@
 		caption Registered Lunchinators
 		thead
 			tr
-				th Name
+				th First
+				th Last
 				th Email
 		tbody
-			tr(ng-repeat='user in data.users')
-				td(ng-click='edit($index)') {{user.Name}}
+			tr(ng-repeat='user in data.users', ng-click='detail($index)')
+				td {{user.Name.First}}
+				td {{user.Name.Last}}
 				td {{user.Email}}
-					a(class='btn btn-mini btn-primary pull-right', href='/#/user/{{user._id}}') Edit
+					
 	a(class='btn btn-mini btn-primary', href='/#/user/new') New

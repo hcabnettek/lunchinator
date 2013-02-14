@@ -13,7 +13,7 @@ var userCheckInSchema = new Schema({
 });
 
 var userSchema = new Schema({
-	Name: String,
+	Name: {First: String, Last:String},
 	Email: String,
 	Lunches : [{type:Schema.Types.ObjectId, ref: 'Lunch'}]
 });

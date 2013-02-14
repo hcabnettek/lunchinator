@@ -6,25 +6,26 @@ angular.module('lunchinator.controllers', [])
 		
 }).controller('LunchCtrl', function($scope) {
   
-}).controller('UserCtrl', function($scope, $routeParams, userSvc){
+}).controller('UserCtrl', function($scope, userSvc){
+	
+	//console.log($routeParams);
+	//console.log(userSvc);
 
-/*
-	var user = UserApi.get({userId: 'foooo'}, function(){
-		console.log(user);
-	}, function(err){
-		console.log(err);
-	}); */
+	//var user = userSvc.get({userId: $routeParams.userId}, function(){
+		//$scope.data = {user: user};
+	//});
 
 }).controller('UsersCtrl', function($scope, userSvc){
 
 	var model = userSvc.list(function(){
-		$scope.data = {users: model.users};
-		console.log($scope.data.users);
+		$scope.data = {users: model.users};		
 	});
-	
 
-	//$scope.data = {users: userSvc.list()};
-
+	$scope.detail = function(idx){
+		var user = $scope.data.users[idx];
+		var hash = '#/user/' + user._id;
+		//$location.hash(hash);
+	};
 
 }).controller('RestaurantCtrl', function($scope){
 	

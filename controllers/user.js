@@ -3,6 +3,7 @@ var odm = require('../db');
 
 exports.index = function(req, res){
 	odm.User.find({}, function(err, users){
+		if(err) console.log(err);
 		res.json({users: users});
 	});
 };
@@ -14,9 +15,12 @@ exports.create = function(req, res){
 };
 
 exports.show = function(req, res){
-	console.log('/user/show');
-	odm.User.findOne({}, function(err, users){
-		res.json({users:users});
+	var id = req.params.id;
+
+	odm.User.findById(id, function(err, user){
+		if(err) console.log(err);
+
+		res.json({user:user});
 	});
 };
 
