@@ -7,6 +7,14 @@ var lunchinator = angular.module('lunchinator', ['api', 'lunchinator.controllers
         templateUrl: '/partials/main/main',
         controller: 'MainCtrl'
       })
+      .when('/user/:id/edit', {
+        templateUrl: '/partials/user/newUser',
+        controller: 'UserEditCtrl'
+      })
+      .when('/user/:id/new', {
+        templateUrl: '/partials/user/newUser',
+        controller: 'UserNewCtrl'
+      })
       .when('/user/:id', {
         templateUrl: '/partials/user/user',
         controller: 'UserCtrl'

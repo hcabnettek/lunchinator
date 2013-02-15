@@ -1,7 +1,9 @@
-form(id='form', method='post', action='/user/checkin')
+form(id='form', method='post', action='')
 	fieldset
-		label(for='name') Name
-		input(type='text', name='name', id='name')
+		label(for='firstName') First
+		input(type='text', name='firstName', id='firstName', ng-model='data.userToEdit.Name.First')
+		label(for='lastName') Last
+		input(type='text', name='lastName', id='lastName', ng-model='data.userToEdit.Name.Last')
 		label(for='email') Email
-		input(type='text', name='email', id='email')
-		input(type='submit', value='Add User')
+		input(type='email', name='email', id='email', ng-model='data.userToEdit.Email')
+		input(type='submit', value='Add User', ng-click='save()')

@@ -8,10 +8,28 @@ angular.module('lunchinator.controllers', [])
   
 }).controller('UserCtrl', function($scope, $routeParams, userSvc){
 	
-	var model = userSvc.get({userId: $routeParams.userId}, function(){
+	var model = userSvc.get({userId: $routeParams.id}, function(){
 		$scope.data = {user: model.user};
-		console.log($scope.data);
+		//console.log($scope.data);
 	});
+
+}).controller('UserEditCtrl', function($scope, $location, userSvc){
+
+	$scope.data = { userToEdit : store.get('user-to-edit')};
+	$scope.save = function(){
+		console.log('save');
+	};
+
+}).controller('UserNewCtrl', function($scope, $location, userSvc){
+
+	var model = userSvc.list(function(){
+		$scope.data = {users: model.users};
+	});
+
+	$scope.detail = function(idx){
+		var user = $scope.data.users[idx];
+		$location.path('/user/' + user._id);
+	};
 
 }).controller('UsersCtrl', function($scope, $location, userSvc){
 
@@ -21,7 +39,8 @@ angular.module('lunchinator.controllers', [])
 
 	$scope.detail = function(idx){
 		var user = $scope.data.users[idx];
-		console.log(user);
+		//lets put in local storage
+		store.set('user-to-edit', user);
 		$location.path('/user/' + user._id);
 	};
 
