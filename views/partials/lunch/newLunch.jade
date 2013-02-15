@@ -1,11 +1,11 @@
-.container(lunchWizard="")
+.container(lunch-wiz="")
 	.btn-group
 		button(class="btn") Action
 		button(class="btn dropdown-toggle", data-toggle="dropdown")
 			span(class="caret")
 		ul(class="dropdown-menu")
 			li
-				a(href='#', ng-click='{{ foo() }}') Lunch Wizard
+				a(href='#', ng-click='showWizard()') Lunch Wizard
 			li
 				a(href='#') Edit Existing
 			li(class='divider')

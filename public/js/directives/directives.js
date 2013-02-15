@@ -1,8 +1,11 @@
+'use strict';
+
 angular.module('lunchinator.directives', []).
-	directive('lunchWiz', function(){
-		return {
-			link: function(scope, elem, attr){
-				console.log('lunchWiz directive');
-			}
-		}
-	})
+	directive('lunchWiz', function(lunchSvc){
+		return function($scope, element, attrs, controller){
+			var wizard = $('#lunch-wiz').wizard({});
+			$scope.showWizard = function(){
+				wizard.show();
+			};
+		};
+	});

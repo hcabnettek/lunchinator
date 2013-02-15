@@ -33,7 +33,7 @@ var lunchinator = angular.module('lunchinator', ['api', 'lunchinator.controllers
       })
       .when('/lunch/new', {
         templateUrl: '/partials/lunch/newLunch',
-        controller: 'LunchAddCtrl'
+        controller: 'LunchCtrl'
       })
        .when('/lunch/:id', {
         templateUrl: '/partials/lunch/lunch',
