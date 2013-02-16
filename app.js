@@ -62,12 +62,12 @@ passport.use(new localStrategy(function(username, password, done){
 
 var app = express();
 app.configure(function(){
-  var redisUrl = url.parse(process.env.REDISTOGO_URL); //,
-     // redisAuth = redisUrl.auth.split(':'); 
+  var redisUrl = url.parse(process.env.REDISTOGO_URL);
+     redisAuth = redisUrl.auth.split(':'); 
   app.set('redisHost', redisUrl.hostname);
   app.set('redisPort', redisUrl.port); 
-  //app.set('redisDb', redisAuth[0]);
-  //app.set('redisPass', redisAuth[1]);
+  app.set('redisDb', redisAuth[0]);
+  app.set('redisPass', redisAuth[1]);
 });
 
 app.configure(function(){
@@ -89,9 +89,9 @@ app.configure(function(){
     store: new RedisStore({
       host: app.get('redisHost'),
       port: app.get('redisPort'),
-      client: require('redis').createClient()//,
-      //db: app.get('redisDb'),
-      //pass: app.get('redisPass')
+      client: require('redis').createClient(),
+      db: app.get('redisDb'),
+      pass: app.get('redisPass')
     })
   }));
   app.use(passport.initialize());
