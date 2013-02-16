@@ -3,9 +3,7 @@
 angular.module('api',['ngResource'])
   .factory('userSvc', function($resource){
     var userSvc = $resource('/user/:userId',
-      {userId: 'OU812'} ,{
-        'list': { method: 'GET', params: {userId:''} }
-      });
+      {userId: ''} ,{ });
 
    /* userResource.prototype.update = function(cb){
       return userResource.update({id: this._id.$oid},

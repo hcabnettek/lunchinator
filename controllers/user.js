@@ -1,10 +1,23 @@
 'use strict';
-var odm = require('../db');
+var odm = require('../db'),
+	crypto = require('crypto');
+
+function doSalt(val){
+	var salt = Math.round((new Date().valueOf() * Math.random())) + '';
+	var hashed = crypto.createHash('sha512')
+						.update(salt + val)
+						.digest('hex');
+	return {
+			hashed : hashed,
+			salt: salt
+		};
+	
+}
 
 exports.index = function(req, res){
 	odm.User.find({}, function(err, users){
 		if(err) console.log(err);
-		res.json({users: users});
+		res.json(users);
 	});
 };
 
@@ -12,6 +25,23 @@ exports.new = function(req, res){
 };
 
 exports.create = function(req, res){
+	
+	var data = req.body,
+		salted = doSalt(req.body.Password),
+		userDto = {
+			Name: { First: data.Name.First, Last: data.Name.Last},
+			Password: salted.hashed,
+			Email: data.Email,
+			UserName: data.UserName,
+			Salt: salted.salt
+		},
+		user = new odm.User(userDto);
+	
+		user.save(function(err){
+			if(err) console.log(err);
+			res.json(201, {id: user._id});
+		});
+	
 };
 
 exports.show = function(req, res){

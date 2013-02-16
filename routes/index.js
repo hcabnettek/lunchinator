@@ -1,7 +1,7 @@
 'use strict';
 
 exports.index = function(req, res){
-	res.render('index', { title: 'Lunchinator'});
+	res.render('index', { title: 'Lunchinator' , user: {authenticated: true}});
 };
 
 exports.partials = function (req, res) {

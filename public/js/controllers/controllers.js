@@ -13,24 +13,24 @@ angular.module('lunchinator.controllers', [])
 
 }).controller('UserEditCtrl', function($scope, $location, userSvc){
 
-	$scope.data = { userToEdit : store.get('user-to-edit')};
-	$scope.save = function(){
-		console.log('save');
-	};
+	//$scope.data = { userToEdit : store.get('user-to-edit')};
+	//$scope.save = function(){
+	//	console.log('save');
+	//};
 
 }).controller('UsersCtrl', function($scope, $location, userSvc){
 
-	var model = userSvc.list(function(){
-		$scope.data = {users: model.users};
+	var users = userSvc.query(function(){
+		$scope.data = {users: users};
 	});
 
 	$scope.detail = function(idx){
-		var user = $scope.data.users[idx];
-		//lets put in local storage
-		store.set('user-to-edit', user);
-		$('#userModal').modal('show');
+		store.set('user-to-edit', $scope.data.users[idx]);
+		//$('#userModal').modal('show');
 		//$location.path('/user/' + user._id);
 	};
+
+	
 
 }).controller('RestaurantCtrl', function($scope){
 	
