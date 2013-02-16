@@ -62,10 +62,10 @@ passport.use(new localStrategy(function(username, password, done){
 
 var app = express();
 app.configure(function(){
-  var redisUrl = url.parse(process.env.REDISTOGO_URL);
-     redisAuth = redisUrl.auth.split(':'); 
+  var redisUrl = url.parse(process.env.REDISTOGO_URL),
+     redisAuth = redisUrl.auth.split(':');
   app.set('redisHost', redisUrl.hostname);
-  app.set('redisPort', redisUrl.port); 
+  app.set('redisPort', redisUrl.port);
   app.set('redisDb', redisAuth[0]);
   app.set('redisPass', redisAuth[1]);
 });
