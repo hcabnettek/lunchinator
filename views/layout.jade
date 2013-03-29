@@ -9,6 +9,7 @@ html(ng-app="lunchinator")
 		link(rel='stylesheet', href='/stylesheets/style.css')
 		link(rel='stylesheet', href='/stylesheets/bootstrap.css')
 		link(rel='stylesheet', href='/stylesheets/bootstrap-responsive.css')
+		link(rel='stylesheet', href='/stylesheets/bootstrap-wizard.css')
 	body
 		.navbar.navbar-inverse.navbar-fixed-top
 			.navbar-inner
@@ -21,14 +22,14 @@ html(ng-app="lunchinator")
 					.nav-collapse.collapse
 						ul(class='nav')
 							li(class='active')
-								a(href='#about') About
+								a(href='/') Home
 							li
-								a(href='#contact') Contact
+								a(href='/restaurant') Restaurants
 							li
-								a(href='/restaurants') Restaurants
+								a(href='/user') Users
 							li
-								a(href='/user/checkin') CheckIn
+								a(href='/lunch') Lunches
+					if user.authenticated === false
 						include partials/login
 		block content
 		include partials/js
-		block scripts    

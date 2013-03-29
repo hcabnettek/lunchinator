@@ -4,8 +4,8 @@
   "description": "Where do you want to go for lunch?",
   "contributors": [ 
     {
-      "name": "Craig Maslowski",
-      "email": "craig@craigmaslowski.com"
+      "name": "Chris Kettenbach",
+      "email": "kettenbach@gmail.com"
     } 
   ],
   "scripts": {
@@ -22,10 +22,13 @@
     "mongodb": ">=1.1.10",
     "mongoose": ">=3.2.1",
     "redis": ">=0.0.1",
-    "connect-redis": ">=1.0.0"   
+    "connect-redis": ">=1.0.0",
+    "passport": ">=0.1.15",
+    "passport-local": ">=0.1.6",
+    "crypto": ">=0.0.3"  
   },
   "engines": {
     "node": ">=0.8",
-     "npm": "1.1.x"    
+     "npm": ">=1.2.x"    
   }
 }

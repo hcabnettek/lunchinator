@@ -1,0 +1,24 @@
+.container(lunch-wiz="")
+	.btn-group
+		button(class="btn") Action
+		button(class="btn dropdown-toggle", data-toggle="dropdown")
+			span(class="caret")
+		ul(class="dropdown-menu")
+			li
+				a(href='#', ng-click='showWizard()') Lunch Wizard
+			li
+				a(href='#') Edit Existing
+			li(class='divider')
+			li
+				a(href='#') Not Implemented
+			li
+				a(href='#') Not Implemented
+
+.wizard(id="lunch-wiz")
+	h1 Lunch Wizard
+	.wizard-card(data-cardname="invitees")
+		h3 Invitees
+		| Invite Form Here
+	.wizard-card(data-cardname="restaurant")
+		h3 Restaurant
+		| Restaurant Form

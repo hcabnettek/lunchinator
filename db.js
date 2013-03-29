@@ -13,10 +13,12 @@ var userCheckInSchema = new Schema({
 });
 
 var userSchema = new Schema({
-	Name: String,
+	Name: {First: String, Last:String},
 	Email: String,
+	Lunches : [{type:Schema.Types.ObjectId, ref: 'Lunch'}],
 	Password: String,
-	Lunches : [{type:Schema.Types.ObjectId, ref: 'Lunch'}]
+	Salt: String,
+	Created: {type: Date, default: Date.now}
 });
 
 var lunchSchema = new Schema({
@@ -28,7 +30,7 @@ var lunchSchema = new Schema({
 	Votes: {up: Number, down: Number}
 });
 
-console.log(process.env.MONGOHQ_URL);
+
 mongoose.connect(process.env.MONGOHQ_URL);
 exports.Restaurant = mongoose.model('Restaurant', restaurantSchema, 'Restaurant');
 exports.CheckedInUser = mongoose.model('CheckedInUser', userCheckInSchema, 'CheckedInUser');

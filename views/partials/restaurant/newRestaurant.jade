@@ -1,0 +1,19 @@
+.container
+	.row
+		.span6.pull-right
+			form(id='form', method='post', action='/restaurants', class='form-horizontal')
+				fieldset
+					legend Add a restaurant
+					.control-group
+						label(class='control-label', for='name') Name
+						.controls
+							input(type='text', name='name', id='name')
+					.control-group
+						label(class='control-label', for='adrress') Address
+						.controls
+							input(type='text', name='address', id='address')
+					.control-group
+						label(class='control-label', for='url') Url
+						.controls
+							input(type='text', name='url', id='url')
+					button(type='submit', class='btn') Add Restaurant
